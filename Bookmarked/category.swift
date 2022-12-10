@@ -21,7 +21,6 @@ struct category: View {
                 Image("header").resizable()
                     .frame(width: 391, height:275).ignoresSafeArea()
                     .padding(.top,-135)
-                
                 ZStack{
                     ScrollView {
                         LazyVGrid (columns: [GridItem(.fixed(180)), GridItem(.fixed(180))]){
