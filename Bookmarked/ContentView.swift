@@ -15,6 +15,7 @@ let bookmarkImages = [
 ]
 
 struct ContentView: View {
+    @State var selected : Bool = false
     var body: some View {
         
         NavigationView{
@@ -41,10 +42,12 @@ struct ContentView: View {
                                     Image(sub.starImage).padding(.top,-70).padding(.leading,35)
                                     
                                     Button{
-                                        print("bookmark fill")
+                                        selected.toggle()
+                                        
+                   
                                     } label: {
-                                        Label("", systemImage: "bookmark.fill").padding(.top,-330).padding(.leading,320).foregroundColor(Color("secondaryColor")).font(.system(size: 30))
-                                    }
+                                        Image(systemName: selected ? "bookmark": "bookmark.fill").foregroundColor(Color("secondaryColor")).font(.system(size: 30))
+                                    }.padding(.top,-330).padding(.leading,320)
                                 }
                                 
                             }
