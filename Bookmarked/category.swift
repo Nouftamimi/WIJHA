@@ -17,7 +17,6 @@ struct category: View {
             
             
             VStack {
-                
                 Image("header").resizable()
                     .frame(width: 391, height:275).ignoresSafeArea()
                     .padding(.top,-135)
@@ -31,6 +30,7 @@ struct category: View {
                                 
                             }
                         }.padding(.top,25)
+                       
                     }
                     
                 }

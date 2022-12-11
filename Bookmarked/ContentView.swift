@@ -48,10 +48,14 @@ struct ContentView: View {
                                     } label: {
                                         Image(systemName: selected ? "bookmark": "bookmark.fill").foregroundColor(Color("secondaryColor")).font(.system(size: 30))
                                     }.padding(.top,-330).padding(.leading,320)
+                                        
                                 }
                                 
                             }
                         }.padding(.top,40)
+                       
+                       
+                        
                     }
                     
                 }//end of zstack
