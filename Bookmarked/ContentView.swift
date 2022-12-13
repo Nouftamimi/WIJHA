@@ -96,7 +96,7 @@ struct DetailView : View {
                         .frame(height: 390).padding(.top,-90)
                         .frame(maxWidth: UIScreen.main.bounds.width)
                     ZStack{
-                        RoundedRectangle(cornerRadius: 40).fill(Color("background1").gradient).frame(width: 390,height: 600).padding(.top,-45)
+                        RoundedRectangle(cornerRadius: 40).fill(Color("background1").gradient).frame(width: 390,height: 600).padding(.top,-50)
                         HStack{
                             
                         
@@ -113,7 +113,7 @@ struct DetailView : View {
                                 
                         
                        
-                            }
+                            }.padding(.top,-40)
                             
                                Spacer()
                             VStack{
@@ -124,7 +124,8 @@ struct DetailView : View {
                                         .foregroundColor(Color.yellow)
                                         .padding(.vertical,8.0)
                                     
-                                }
+                                }.padding(.top,-40)
+                                
                                 HStack{
                                     Text("100")
                                         .foregroundColor(Color("caption"))
@@ -162,7 +163,7 @@ struct DetailView : View {
                       
                     }
                 }.frame(maxWidth: .infinity)
-                Spacer()
+                //Spacer()
                 
             }
            
