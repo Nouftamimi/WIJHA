@@ -10,10 +10,10 @@ import SwiftUI
 let navBarAppearance = UINavigationBar.appearance()
 
 let bookmarkImages = [
-    bookmark(Id: 0, bookmarkImage:"bookmark1", tagImage:"rectangletTag", placeName: "Riaydh Front", rating: "4.0", isSelected: false, placeDetail: "place 1 details"),
-    bookmark(Id: 1, bookmarkImage:"bookmark2",  tagImage:"rectangletTag", placeName: "Zamakan cafe", rating: "3.0", isSelected: false, placeDetail: "place 2 details"),
-    bookmark(Id: 2, bookmarkImage:"bookmark3",  tagImage:"rectangletTag", placeName: "Boulevard", rating: "4.0", isSelected: false, placeDetail: "place 3 details"),
-    bookmark(Id: 3, bookmarkImage:"bookmark4",  tagImage:"rectangletTag", placeName: "Knoll cafe", rating: "3.8", isSelected: false, placeDetail: "place 4 details")
+    bookmark(bookmarkImage:"bookmark1", tagImage:"rectangletTag", placeName: "Riaydh Front", rating: "4.0", isSelected: false, placeDetail: "place 1 details"),
+    bookmark( bookmarkImage:"bookmark2",  tagImage:"rectangletTag", placeName: "Zamakan cafe", rating: "3.0", isSelected: false, placeDetail: "place 2 details"),
+    bookmark( bookmarkImage:"bookmark3",  tagImage:"rectangletTag", placeName: "Boulevard", rating: "4.0", isSelected: false, placeDetail: "place 3 details"),
+    bookmark( bookmarkImage:"bookmark4",  tagImage:"rectangletTag", placeName: "Knoll cafe", rating: "3.8", isSelected: false, placeDetail: "place 4 details")
     
 ]
 
@@ -27,6 +27,9 @@ let tagsticker = [
     
 ]
 
+//init(){
+//    UIback.appearance().tintColor = UIColor.white
+//}
 
 struct ContentView: View {
     var body: some View {
@@ -48,7 +51,7 @@ struct ContentView: View {
                             
                             ForEach(bookmarkImages) { sub in
                                 VStack(alignment: .leading){
-                                    NavigationLink(destination: DetailView(bk:sub )){
+                                    NavigationLink(destination: DetailView(bk: sub )){
                                         Image(sub.bookmarkImage).resizable().cornerRadius(10).frame(width: 358.51, height: 290).padding(.top,-40)
                                     }
                                     Image(sub.tagImage).padding(.top,-66)
@@ -72,14 +75,14 @@ struct ContentView: View {
                 }//end of zstack
                 }
             
-        }.navigationBarTitle(Text("My Profile"))
+        }//.navigationBarTitle(Text("My Profile"))
     
                     
         }
         
     }
 
-
+//Place view
 
 struct DetailView : View {
     let bk: bookmark
@@ -182,16 +185,22 @@ struct DetailView : View {
 
 struct bookmark: Identifiable {
   var id = UUID()
-  var Id = Int()
+  //var Id = Int()
   var bookmarkImage: String
   var tagImage: String
   var placeName: String
   var rating: String
     
+//static let bm: bookmark = .init(bookmarkImage: "", tagImage: "", placeName: "hi", rating: "66", isSelected: false, placeDetail: "mmmmm")
+    //static let bm: bookmark = .init(bookmarkImage: "", tagImage: "", placeName: "hi", rating: "66", isSelected: false, placeDetail: "mmmmm")
   @State var isSelected : Bool
   var placeDetail: String
+  //static let bm: bookmark = .
     
 }
+
+//static let bm: bookmark = [book]
+
 
 
 

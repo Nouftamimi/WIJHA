@@ -17,7 +17,7 @@ struct category: View {
             
             
             VStack {
-                Image("header").resizable()
+                Image("header").resizable().position(x:195,y: 120)
                     .frame(width: 391, height:275).ignoresSafeArea()
                     .padding(.top,-135)
                 ZStack{
@@ -36,7 +36,7 @@ struct category: View {
                 }
             }
           
-        }//end of navigation view
+        }.navigationBarBackButtonHidden()//end of navigation view
     }
     struct photo: Identifiable {
         var id = UUID()
