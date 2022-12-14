@@ -15,6 +15,7 @@ let bookmarkImages = [
     bookmark( bookmarkImage:"bookmark3",  tagImage:"rectangletTag", placeName: "Boulevard", rating: "4.0", isSelected: false, placeDetail: "place 3 details"),
     bookmark( bookmarkImage:"bookmark4",  tagImage:"rectangletTag", placeName: "Knoll cafe", rating: "3.8", isSelected: false, placeDetail: "place 4 details")
     
+    
 ]
 
 let tagsticker = [
