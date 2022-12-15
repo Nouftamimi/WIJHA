@@ -18,6 +18,7 @@
 		1E8E22692940C17500C2330A /* BookmarkedUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8E22682940C17500C2330A /* BookmarkedUITestsLaunchTests.swift */; };
 		1EC5F2C4294A363400CC7AB0 /* Intro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC5F2C3294A363400CC7AB0 /* Intro.swift */; };
 		1EC5F2CA294A36EF00CC7AB0 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC5F2C9294A36EF00CC7AB0 /* Home.swift */; };
+		1ECB0952294B44F3005D3ABE /* PlaceDeatil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECB0951294B44F3005D3ABE /* PlaceDeatil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		1E8E22682940C17500C2330A /* BookmarkedUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkedUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1EC5F2C3294A363400CC7AB0 /* Intro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro.swift; sourceTree = "<group>"; };
 		1EC5F2C9294A36EF00CC7AB0 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		1ECB0951294B44F3005D3ABE /* PlaceDeatil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDeatil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				1EC5F2C2294A35AC00CC7AB0 /* Model */,
 				1E8E224B2940C17400C2330A /* BookmarkedApp.swift */,
 				1E8E224D2940C17400C2330A /* ContentView.swift */,
+				1ECB0951294B44F3005D3ABE /* PlaceDeatil.swift */,
 				1E3B493C2949F0830060C8E6 /* HomePage.swift */,
 				1E03A10929435BD7008B227A /* category.swift */,
 				1E8E224F2940C17500C2330A /* Assets.xcassets */,
@@ -286,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EC5F2C4294A363400CC7AB0 /* Intro.swift in Sources */,
+				1ECB0952294B44F3005D3ABE /* PlaceDeatil.swift in Sources */,
 				1E8E224E2940C17400C2330A /* ContentView.swift in Sources */,
 				1E03A10A29435BD7008B227A /* category.swift in Sources */,
 				1E8E224C2940C17400C2330A /* BookmarkedApp.swift in Sources */,

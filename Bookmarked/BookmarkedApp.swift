@@ -11,7 +11,8 @@ import SwiftUI
 struct BookmarkedApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Home()
+            //ContentView()
         }
     }
 }

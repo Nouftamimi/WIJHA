@@ -18,9 +18,9 @@ struct person: View{
 struct Home: View {
     @State var intros: [Intro] = [
     
-        Intro(title: "Headline1", subTitle: "intro1", description: "text1.................................................", pic: "Onboard1", color: Color("primaryColor 1")),
-        Intro(title: "Headline2", subTitle: "intro2", description: "text2.................................................", pic: "Onboard2", color: Color("secondaryColor")),
-        Intro(title: "Headline3", subTitle: "intro3", description: "text3.................................................", pic: "Onboard3", color: Color("thirdColor"))
+        Intro(title: "Welcome", subTitle: "intro1", description: "Let's take you to your  next favorite place ", pic: "Onboard1", color: Color("primaryColor 1")),
+        Intro(title: "Search", subTitle: "intro2", description: "With our variety of categories you can easily find what your looking for", pic: "Onboard2", color: Color("secondaryColor")),
+        Intro(title: "Enjoy", subTitle: "intro3", description: "And don’t forgot to share with your loved ones ", pic: "Onboard3", color: Color("thirdColor"))
     ]
     
     //gesture properties
@@ -30,6 +30,7 @@ struct Home: View {
     @State var currentIndex: Int = 0
     
     var body: some View {
+        NavigationView{
         ZStack{
             ForEach(intros.indices.reversed(),id: \.self){ index in
                 //intro view
@@ -52,24 +53,30 @@ struct Home: View {
                 }
                 Spacer()
                 
-                NavigationLink(destination: person()) {
-                    Text("skip")
-                }.foregroundColor(.white).font(.title)
                 
-               
-//                    Button {
-//
-//
-//
-//                    }label: {
-//
-//                        Text("Skip").fontWeight(.semibold)
-//                            .foregroundColor(.white)
-//                    }
+                NavigationLink(destination:HomePage()) {
+                    
+                    Text("skip").foregroundColor(.white).font(.title)
+                }
+                
+                
+                
+                
+                //                    Button {
+                //
+                //
+                //
+                //                    }label: {
+                //
+                //                        Text("Skip").fontWeight(.semibold)
+                //                            .foregroundColor(.white)
+                //                    }
                 
             }.padding()
                 .padding(.horizontal)
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+        }
+            
         }
         //arrow with drag gesture..
         .overlay(
@@ -137,7 +144,7 @@ struct Home: View {
                                 }
                             })
                     )
-            })
+            })//.hidden()
             
             .offset(y: 53 )
             .opacity(isDragging ? 0: 1)
@@ -174,15 +181,15 @@ struct Home: View {
             VStack(alignment: .leading, spacing: 0 ){
                 
                 Text(intro.title)
-                    .font(.system(size: 45))
+                    .font(.system(size: 45)).foregroundColor(.white).padding()
                 //Text(intro.subTitle)
-                    .font(.system(size: 50, weight: .bold))
+                    .font(.system(size: 50, weight: .bold)).bold()
                 Text(intro.description)
-                    .font(.system(size: 20))
+                    .font(.system(size: 25))
                     .fontWeight(.semibold)
                     .padding(.top)
-                    .frame(width: getRect().width - 100)
-                    .lineSpacing(8)
+                    .frame(width: getRect().width - 40)
+                    .lineSpacing(8).foregroundColor(.white)
                 
             }
         }

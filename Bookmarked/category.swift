@@ -9,6 +9,10 @@ import SwiftUI
 
 
 struct category: View {
+    
+    //let cate: photo
+    
+    @Environment(\.colorScheme) var colorScheme
     let photos = [ photo(categoryphotos: "entertainmentPlaces"),
                    photo(categoryphotos: "vegan friendly"), photo(categoryphotos: "budget friendly"), photo(categoryphotos: "memorable"), photo(categoryphotos: "24Hour"), photo(categoryphotos: "studyCafe"),photo(categoryphotos: "familyplaces"),photo(categoryphotos: "NewPlaces")]
     
@@ -25,9 +29,10 @@ struct category: View {
                         LazyVGrid (columns: [GridItem(.fixed(180)), GridItem(.fixed(180))]){
                             ForEach(photos){ sub in
                                 VStack(alignment: .leading){
-                                    Image(sub.categoryphotos).resizable().frame(width: 220,height: 220).padding(.top,-40)
+                                    NavigationLink(destination: ContentView()){
+                                        Image(sub.categoryphotos).resizable().frame(width: 220,height: 220).padding(.top,-40)
+                                    }
                                 }
-                                
                             }
                         }.padding(.top,25)
                        
